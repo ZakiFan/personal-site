@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的作品展示</title>
+		<style>
+			html,body{padding:0;margin: 0; background-color:#FFF3EC ;}
+		</style>
+		<script>
+			window.onload = function(){
+				var index = getUrlParam("zpImgIndex");
+				document.getElementById("zpImg").src = "images/zp_"+index+"_big.jpg";
+			}
+			function getUrlParam(name){  
+				//构造一个含有目标参数的正则表达式对象  
+				var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");  
+				//匹配目标参数  
+				var r = window.location.search.substr(1).match(reg);  
+				//返回参数值  
+				if (r!=null) return unescape(r[2]);  
+				return null;  
+			}  
+		</script>
+	</head>
+	<body>
+		<div style="width:1024px; margin: auto;">
+			<img id="zpImg" />
+		</div>
+	</body>
+</html>
