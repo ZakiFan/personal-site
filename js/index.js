@@ -26,7 +26,10 @@ $(function(){
         centeredSlides: true,
         loop : true,
 		slidesPerView : 'auto',
+		speed:1000,
 		loopedSlides :3,
+		autoplay : 3000,
+		autoplayDisableOnInteraction : false,
         coverflow: {
             rotate: 50,
             stretch: 0,
